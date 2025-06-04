@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.10.12 on linux)" generated="2025-06-02T09:07:02.791069" rpa="false" schemaversion="5">
+<suite id="s1" name="Delivery Tests" source="/home/robson.matos/robson/desafio-qa-coco-bambu/tests/delivery_tests.robot">
+<test id="s1-t1" name="Tela Inicial do Delivery" line="7">
+<kw name="Abrir Navegador Para Página de Delivery" owner="common">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:02.879661" level="INFO">Opening browser 'Chrome' to base url 'https://app-hom.cocobambu.com/delivery'.</msg>
+<arg>${URL}</arg>
+<arg>${NAVEGADOR}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-02T09:07:02.879396" elapsed="10.287884"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-02T09:07:13.167568" elapsed="0.001513"/>
+</kw>
+<status status="PASS" start="2025-06-02T09:07:02.878819" elapsed="10.290437"/>
+</kw>
+<kw name="Realizar o Login" owner="delivery">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TEXTO_ENDERECO_ENTREGA}</arg>
+<arg>30</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-02T09:07:13.169835" elapsed="16.055924"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:29.226324" level="INFO">Clicking element 'xpath=//span[contains(.,'Perfil')]'.</msg>
+<arg>${BUTTON_PERFIL}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-02T09:07:29.226027" elapsed="0.041142"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:29.267744" level="INFO">Clicking element 'xpath=//span[contains(.,'Entrar')]'.</msg>
+<arg>${BUTTON_ENTRAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-02T09:07:29.267448" elapsed="0.059403"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CAMPO_EMAIL}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-02T09:07:29.327139" elapsed="4.324364"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:33.652134" level="INFO">Typing text 'testeqahemyllin@gmail.com' into text field 'xpath=//input[@name='username']'.</msg>
+<arg>${CAMPO_EMAIL}</arg>
+<arg>testeqahemyllin@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-02T09:07:33.651794" elapsed="0.063133"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:33.715865" level="INFO">Typing text 'Hest@123' into text field 'xpath=//input[@name='password']'.</msg>
+<arg>${CAMPO_SENHA}</arg>
+<arg>Hest@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-02T09:07:33.715370" elapsed="0.047483"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:33.763611" level="INFO">Clicking element 'xpath=//span[normalize-space()='ENTRAR']'.</msg>
+<arg>${BUTTON_LOGIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-02T09:07:33.763231" elapsed="0.037533"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_FECHAR}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-02T09:07:33.801092" elapsed="2.896905"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:36.698563" level="INFO">Clicking element 'xpath=//button[normalize-space()='FECHAR']'.</msg>
+<arg>${BUTTON_FECHAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-02T09:07:36.698271" elapsed="0.034237"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CAMPO_CODIGO}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-02T09:07:36.732775" elapsed="0.017644"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:36.751196" level="INFO">Typing text 'AAAAAA' into text field 'xpath=(//input[@autocomplete='one-time-code'])[1]'.</msg>
+<arg>${CAMPO_CODIGO}</arg>
+<arg>AAAAAA</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-02T09:07:36.750855" elapsed="0.051063"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:36.802546" level="INFO">Clicking element 'xpath=//span[normalize-space()='ACESSAR']'.</msg>
+<arg>${BUTTON_ACESSAR}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-02T09:07:36.802216" elapsed="0.032879"/>
+</kw>
+<status status="PASS" start="2025-06-02T09:07:13.169542" elapsed="23.665774"/>
+</kw>
+<kw name="Cadastrar Endereço" owner="delivery">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${BUTTON_CADASTRAR_ENDERECO}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-02T09:07:36.836066" elapsed="3.307050"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:40.143662" level="INFO">Clicking element 'xpath=//span[contains(.,'Cadastre aqui um endereço')]'.</msg>
+<arg>${BUTTON_CADASTRAR_ENDERECO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-02T09:07:40.143378" elapsed="0.045067"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-02T09:07:45.189178" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-02T09:07:40.188754" elapsed="5.000689"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:45.189931" level="INFO">Clicking element 'xpath=//span[contains(.,'Adicionar novo endereço')]'.</msg>
+<arg>${BUTTON_ADICIONAR_ENDERECO}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-02T09:07:45.189653" elapsed="0.054281"/>
+</kw>
+<status status="PASS" start="2025-06-02T09:07:36.835722" elapsed="8.408433"/>
+</kw>
+<kw name="Inserir CEP Valido" owner="delivery">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CAMPO_CEP}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-02T09:07:45.244897" elapsed="0.221789"/>
+</kw>
+<kw name="Digitar Devagar" owner="delivery">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-06-02T09:07:45.467910" level="INFO">${caracteres} = ['7', '3', '2', '5', '0', '-', '1', '5', '0']</msg>
+<var>${caracteres}</var>
+<arg>list('${texto}')</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-06-02T09:07:45.467641" elapsed="0.000381"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:45.468766" level="INFO">Sending key(s) ('7',) to xpath=//input[@placeholder='Informe seu endereço'] element.</msg>
+<msg time="2025-06-02T09:07:45.733594" level="INFO">Sending key 7</msg>
+<arg>${locator}</arg>
+<arg>${char}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-06-02T09:07:45.468446" elapsed="0.279414"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-02T09:07:45.948770" level="INFO">Slept 200 milliseconds.</msg>
+<arg>${intervalo}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-02T09:07:45.748239" elapsed="0.200833"/>
+</kw>
+<var name="${char}">7</var>
+<status status="PASS" start="2025-06-02T09:07:45.468309" elapsed="0.480864"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:45.949853" level="INFO">Sending key(s) ('3',) to xpath=//input[@placeholder='Informe seu endereço'] element.</msg>
+<msg time="2025-06-02T09:07:46.211178" level="INFO">Sending key 3</msg>
+<arg>${locator}</arg>
+<arg>${char}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-06-02T09:07:45.949495" elapsed="0.266536"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-02T09:07:46.416844" level="INFO">Slept 200 milliseconds.</msg>
+<arg>${intervalo}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-02T09:07:46.216387" elapsed="0.200823"/>
+</kw>
+<var name="${char}">3</var>
+<status status="PASS" start="2025-06-02T09:07:45.949326" elapsed="0.468027"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:46.418123" level="INFO">Sending key(s) ('2',) to xpath=//input[@placeholder='Informe seu endereço'] element.</msg>
+<msg time="2025-06-02T09:07:46.679658" level="INFO">Sending key 2</msg>
+<arg>${locator}</arg>
+<arg>${char}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-06-02T09:07:46.417721" elapsed="0.267911"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-02T09:07:46.886317" level="INFO">Slept 200 milliseconds.</msg>
+<arg>${intervalo}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-02T09:07:46.685938" elapsed="0.200690"/>
+</kw>
+<var name="${char}">2</var>
+<status status="PASS" start="2025-06-02T09:07:46.417524" elapsed="0.469213"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:46.887492" level="INFO">Sending key(s) ('5',) to xpath=//input[@placeholder='Informe seu endereço'] element.</msg>
+<msg time="2025-06-02T09:07:47.154251" level="INFO">Sending key 5</msg>
+<arg>${locator}</arg>
+<arg>${char}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-06-02T09:07:46.887115" elapsed="0.273112"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-02T09:07:47.360874" level="INFO">Slept 200 milliseconds.</msg>
+<arg>${intervalo}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-02T09:07:47.160506" elapsed="0.200642"/>
+</kw>
+<var name="${char}">5</var>
+<status status="PASS" start="2025-06-02T09:07:46.886902" elapsed="0.474355"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:47.361982" level="INFO">Sending key(s) ('0',) to xpath=//input[@placeholder='Informe seu endereço'] element.</msg>
+<msg time="2025-06-02T09:07:47.625192" level="INFO">Sending key 0</msg>
+<arg>${locator}</arg>
+<arg>${char}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-06-02T09:07:47.361595" elapsed="0.269417"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-02T09:07:47.831670" level="INFO">Slept 200 milliseconds.</msg>
+<arg>${intervalo}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-02T09:07:47.631288" elapsed="0.200639"/>
+</kw>
+<var name="${char}">0</var>
+<status status="PASS" start="2025-06-02T09:07:47.361413" elapsed="0.470622"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:47.832725" level="INFO">Sending key(s) ('-',) to xpath=//input[@placeholder='Informe seu endereço'] element.</msg>
+<msg time="2025-06-02T09:07:48.107657" level="INFO">Sending key -</msg>
+<arg>${locator}</arg>
+<arg>${char}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-06-02T09:07:47.832364" elapsed="0.280720"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-02T09:07:48.313826" level="INFO">Slept 200 milliseconds.</msg>
+<arg>${intervalo}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-02T09:07:48.113367" elapsed="0.200733"/>
+</kw>
+<var name="${char}">-</var>
+<status status="PASS" start="2025-06-02T09:07:47.832183" elapsed="0.482017"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:48.314873" level="INFO">Sending key(s) ('1',) to xpath=//input[@placeholder='Informe seu endereço'] element.</msg>
+<msg time="2025-06-02T09:07:48.578368" level="INFO">Sending key 1</msg>
+<arg>${locator}</arg>
+<arg>${char}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-06-02T09:07:48.314518" elapsed="0.269514"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-02T09:07:48.784682" level="INFO">Slept 200 milliseconds.</msg>
+<arg>${intervalo}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-02T09:07:48.584312" elapsed="0.200658"/>
+</kw>
+<var name="${char}">1</var>
+<status status="PASS" start="2025-06-02T09:07:48.314345" elapsed="0.470727"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:48.785721" level="INFO">Sending key(s) ('5',) to xpath=//input[@placeholder='Informe seu endereço'] element.</msg>
+<msg time="2025-06-02T09:07:49.050512" level="INFO">Sending key 5</msg>
+<arg>${locator}</arg>
+<arg>${char}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-06-02T09:07:48.785380" elapsed="0.271973"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-02T09:07:49.258314" level="INFO">Slept 200 milliseconds.</msg>
+<arg>${intervalo}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-02T09:07:49.057646" elapsed="0.200943"/>
+</kw>
+<var name="${char}">5</var>
+<status status="PASS" start="2025-06-02T09:07:48.785217" elapsed="0.473473"/>
+</iter>
+<iter>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:49.259426" level="INFO">Sending key(s) ('0',) to xpath=//input[@placeholder='Informe seu endereço'] element.</msg>
+<msg time="2025-06-02T09:07:49.523113" level="INFO">Sending key 0</msg>
+<arg>${locator}</arg>
+<arg>${char}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2025-06-02T09:07:49.259051" elapsed="0.270365"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-02T09:07:49.730071" level="INFO">Slept 200 milliseconds.</msg>
+<arg>${intervalo}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-02T09:07:49.529686" elapsed="0.200652"/>
+</kw>
+<var name="${char}">0</var>
+<status status="PASS" start="2025-06-02T09:07:49.258843" elapsed="0.471603"/>
+</iter>
+<var>${char}</var>
+<value>@{caracteres}</value>
+<status status="PASS" start="2025-06-02T09:07:45.468117" elapsed="4.262396"/>
+</for>
+<arg>${CAMPO_CEP}</arg>
+<arg>73250-150</arg>
+<arg>0.2</arg>
+<status status="PASS" start="2025-06-02T09:07:45.467093" elapsed="4.263526"/>
+</kw>
+<status status="PASS" start="2025-06-02T09:07:45.244554" elapsed="4.486141"/>
+</kw>
+<kw name="Validar Mensagem Nenhum Resultado encontrado" owner="delivery">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${MENSAGEM_NENHUM_RESULTADO}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-02T09:07:49.731241" elapsed="0.012525"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-02T09:07:49.759906" level="INFO">Element 'xpath=//p[contains(text(), 'Nenhum resultado encontrado.')]' contains text 'Nenhum resultado encontrado.'.</msg>
+<arg>${MENSAGEM_NENHUM_RESULTADO}</arg>
+<arg>Nenhum resultado encontrado.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-06-02T09:07:49.744096" elapsed="0.016228"/>
+</kw>
+<status status="PASS" start="2025-06-02T09:07:49.730921" elapsed="0.029631"/>
+</kw>
+<doc>Realiza login na aplicação para cadastrar um endereço, teste não consegue cadastrar devido ao erro na consulta</doc>
+<status status="PASS" start="2025-06-02T09:07:02.878160" elapsed="46.882897"/>
+</test>
+<status status="PASS" start="2025-06-02T09:07:02.792954" elapsed="46.968687"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Delivery Tests" id="s1" pass="1" fail="0" skip="0">Delivery Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
