@@ -1,0 +1,3 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Jun 04 12:45:22 UTC 2025","Wed Jun 04 12:46:11 UTC 2025","48251","","Tests","Delivery Tests","","","Tela Inicial do Delivery","Realizar login na aplicação para cadastrar um endereço. Não consegue cadastrar devido ao erro na consulta"
+"passed","Wed Jun 04 12:45:22 UTC 2025","Wed Jun 04 12:45:22 UTC 2025","235","","Tests","Carts Api Tests","","","Api Carts - Consultar e Editar Carrinho","Teste  DummyJson API"
