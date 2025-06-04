@@ -71,5 +71,5 @@ jobs:
 
       - name: Exibir link do relatório Allure
         run: |
-          echo "Relatório disponível em: https://hugosmonteiro.github.io/desafio_coco_bambu/"
+          echo "Relatório disponível em: https://hugosmonteiro.github.io/HugoSMonteiro-desafio_coco_bambu/"
           echo "Se não aparecer, aguarde alguns minutos para o GitHub Pages atualizar"
