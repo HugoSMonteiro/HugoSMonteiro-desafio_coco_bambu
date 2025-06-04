@@ -5,6 +5,9 @@ on:
     branches: [main]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   robot-tests:
     runs-on: ubuntu-latest
@@ -36,37 +39,37 @@ jobs:
 
       - name: Executar testes Robot Framework com listener Allure
         run: |
-          mkdir -p results/allure-results  # Cria diretório se não existir
+          mkdir -p results/allure-results
           robot \
           -v NAVEGADOR:headlesschrome \
-          -v CHROME_OPTIONS:'{"args": ["--headless", "--no-sandbox", "--disable-dev-shm-usage", "--user-data-dir=/tmp/chrome-user-data"]}' \
+          -v CHROME_OPTIONS:'{"args": ["--headless", "--no-sandbox", "--disable-dev-shm-usage"]}' \
           --listener allure_robotframework:results/allure-results \
           -d results \
           tests/
 
       - name: Publicar resultados do Allure como artefato
-        if: always()  
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
           path: results/allure-results/
 
       - name: Gerar relatório HTML do Allure
-        if: always()  
+        if: always()
         run: |
-          mkdir -p results/allure-report  # Cria diretório se não existir
+          mkdir -p results/allure-report
           allure generate results/allure-results --clean -o results/allure-report
-          ls -la results/allure-report  # Lista conteúdo para debug
+          ls -la results/allure-report
 
       - name: Publicar relatório Allure no GitHub Pages
-        if: always() 
+        if: always()
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./results/allure-report
-          keep_files: true 
+          keep_files: true
 
       - name: Exibir link do relatório Allure
         run: |
-          echo "Relatório disponível em: https://HugoSMonteiro.github.io/desafio_coco_bambu/"
+          echo "Relatório disponível em: https://hugosmonteiro.github.io/desafio_coco_bambu/"
           echo "Se não aparecer, aguarde alguns minutos para o GitHub Pages atualizar"
