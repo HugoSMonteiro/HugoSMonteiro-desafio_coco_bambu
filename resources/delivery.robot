@@ -48,11 +48,9 @@ Inserir CEP Valido
     Wait Until Element Is Visible    ${CAMPO_CEP}      60
     Digitar Devagar    ${CAMPO_CEP}    73250-150    0.2  # Intervalo de 0.2 segundos      
    
-
 Validar Mensagem Nenhum Resultado encontrado
     Wait Until Element Is Visible    ${MENSAGEM_NENHUM_RESULTADO}    60
     Element Should Contain    ${MENSAGEM_NENHUM_RESULTADO}    Nenhum resultado encontrado.
-
 
 Digitar Devagar
     [Arguments]    ${locator}    ${texto}    ${intervalo}=0.1
